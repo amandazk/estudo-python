@@ -9,4 +9,4 @@ class Data:
         print("{}/{}/{}".format(self.dia, self.mes, self.ano))
 
 d = Data(21,11,2007)
-d.formatada()
+d.formatada() 
