@@ -37,12 +37,21 @@ class Conta:
 
     @property
     def limite(self):
-        self.__limite
-        print("O limite do titular é {} reais".format(self.__limite))
+        return self.__limite
 
     @limite.setter
     def limite(self, limite):
         self.__limite = limite
+
+#Métodos estáticos = métodos da classe
+    @staticmethod
+    def codigo_banco():
+        return "001"
+
+    @staticmethod
+    def codigos_bancos():
+        return {'BB' : '001', 'Caixa' : '104', 'Bradesco' : '236'}
+
 
 # Testes
 conta = Conta(123, "Amanda", 1000.0, 3000.0)
