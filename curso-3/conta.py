@@ -25,10 +25,14 @@ class Conta:
     def get_titular(self):
         return self.__titular
 
-    def get_limite(self):
+    @property
+    def limite(self):
         self.__limite
+        print("O saldo do titular é {} reais".format(self.__limite))
 
-    def set_limite(self, limite):
+
+    @limite.setter
+    def limite(self, limite):
         self.__limite = limite
 
 # Testes
@@ -44,3 +48,6 @@ conta2.extrato()
 conta.transfere(10.0, conta2)
 conta.extrato()
 conta2.extrato()
+
+conta.limite = 4000.0
+conta.limite
