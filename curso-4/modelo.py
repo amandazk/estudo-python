@@ -21,26 +21,20 @@ class Programa:
 
 class Filme(Programa):
     def __init__(self, nome, ano, duracao):
-        self._nome = nome.title()
-        self.ano = ano
+        super().__init__(nome, ano) # pega do construtor da classe mãe (Programa)
         self.duracao = duracao
-        self._likes = 0
 
 class Serie(Programa):
     def __init__(self, nome, ano, temporadas):
-        self._nome = nome.title()
-        self.ano = ano
+        super().__init__(nome, ano)
         self.temporadas = temporadas
-        self._likes = 0
 
 
 vingadores = Filme('vingadores - guerra infinita', 2018, 160)
-print(vingadores.nome)
+print('{} - {} : {}'.format(vingadores.nome, vingadores.duracao, vingadores.likes))
 
 mindhunter = Serie('Mindunter', 2019, 2)
 mindhunter.dar_like()
 mindhunter.dar_like()
 
-print('Nome da série: {} - Ano: {} - Temporadas: {} - Likes: {}'.format(
-        mindhunter.nome, mindhunter.ano, mindhunter.temporadas, mindhunter.likes)
-)
+print('{} - {} : {}'.format(mindhunter.nome, mindhunter.temporadas, mindhunter.likes))
