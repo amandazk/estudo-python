@@ -40,10 +40,22 @@ class Serie(Programa):
         return '{} - {} - {} temporada(s) - {} like(s)'.format(self._nome, self.ano, self.temporadas, self._likes)
 
 
-class Playlist(list):
+class Playlist:
     def __init__(self, nome, programas):
         self.nome = nome
-        super().__init__(programas) 
+        self._programas = programas
+
+    def __getitem__(self, item):
+        return self._programas[item]
+    
+    @property
+    def listagem(self):
+        return self._programas
+
+    @property
+    def tamanho(self):
+        return len(self._programas)
+
 
 vingadores = Filme('vingadores - guerra infinita', 2018, 160)
 mindhunter = Serie('Mindunter', 2019, 2)
@@ -61,7 +73,7 @@ ponyo.dar_like()
 filmes_e_series = [vingadores, mindhunter, rua_do_medo, ponyo, atypical]
 playlist_fim_de_semana = Playlist('fim de semana', filmes_e_series)
 
-print('Tamanho da playlist : {}'.format(len(playlist_fim_de_semana)))
+print('Tamanho da playlist : {}'.format(len(playlist_fim_de_semana.listagem)))
 
 for programa in playlist_fim_de_semana:
     print(programa)
