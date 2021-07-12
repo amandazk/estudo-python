@@ -40,12 +40,29 @@ class Serie(Programa):
         return '{} - {} - {} temporada(s) - {} like(s)'.format(self._nome, self.ano, self.temporadas, self._likes)
 
 
+class Playlist:
+    def __init__(self, nome, programas):
+        self.nome = nome
+        self.programas = programas
+
+    def tamanho(self):
+        return len(self.programas)
+
 vingadores = Filme('vingadores - guerra infinita', 2018, 160)
-
 mindhunter = Serie('Mindunter', 2019, 2)
-mindhunter.dar_like()
-mindhunter.dar_like()
+rua_do_medo = Filme('Rua do Medo', 2021, 100)
+ponyo = Filme('Ponyo - Uma amizade que veio do mar', 2008, 150)
+atypical = Serie('Atypical', 2017, 4)
 
-filmes_e_series = [vingadores, mindhunter]
-for programa in filmes_e_series:
+mindhunter.dar_like()
+atypical.dar_like()
+atypical.dar_like()
+atypical.dar_like()
+ponyo.dar_like()
+ponyo.dar_like()
+
+filmes_e_series = [vingadores, mindhunter, rua_do_medo, ponyo, atypical]
+playlist_fim_de_semana = Playlist('fim de semana', filmes_e_series)
+
+for programa in playlist_fim_de_semana.programas:
     print(programa)
