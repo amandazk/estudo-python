@@ -31,7 +31,7 @@ Formação Python completa da plataforma Alura.
 [1]: https://github.com/amandazk/estudo-python/tree/main/curso-1
 [2]: https://github.com/amandazk/estudo-python/tree/main/curso-2
 [3]: https://github.com/amandazk/estudo-python/tree/main/curso-3
-[4]: https://github.com/amandazk/estudo-python/tree/main/curso-3
+[4]: https://github.com/amandazk/estudo-python/tree/main/curso-4
 
 
 
