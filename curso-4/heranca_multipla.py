@@ -37,3 +37,5 @@ class Senior(Alura, Caelum, Hipster):
 
 joao = Senior('João')
 print(joao)
+
+#mixins = Os mixins são classes herdadas que não precisam ser instanciadas e contém preocupações comuns a diversas classes.
