@@ -48,14 +48,36 @@ class ExtratorURL:
     def __str__(self):
         return self.url + "\n" + "Parâmetros: " + self.get_url_parametros() + "\n" + "URL Base: " + self.get_url_base()
 
+    def __eq__(self, other):
+        return self.url == other.url
 
-# url = 'https://www.bytebank.com.br/cambio'
-extrator = ExtratorURL("https://bytebank.com/cambio?moedaDestino=dolar&moedaOrigem=real")
+    def converte(self):
+        cotacao_dolar = 5.50
+        origem = self.get_valor_parametro("moedaOrigem")
+        destino = self.get_valor_parametro("moedaDestino")
+        quantidade = float(self.get_valor_parametro("quantidade"))
+
+        if origem == "dolar" and destino == "real":
+            valor_conversao = quantidade * cotacao_dolar
+            return valor_conversao
+
+        elif origem == "real" and destino == "dolar":
+            valor_conversao =  quantidade / cotacao_dolar
+            return valor_conversao
+
+url = 'https://bytebank.com/cambio?moedaDestino=dolar&moedaOrigem=real&quantidade=100'
+extrator = ExtratorURL(url)
 valor_quantidade = extrator.get_valor_parametro("moedaOrigem")
 print(extrator)
 print(valor_quantidade)
 print("O tamanho da URL é:", len(extrator))
 
-# extrator_2 = ExtratorURL(None)
-# valor_quantidade = extrator_2.get_valor_parametro("moedaOrigem")
-# print(valor_quantidade)
+extrator_2 = ExtratorURL(url)
+print(extrator_2 == extrator)
+# imprimir o endereço de memória
+print(id(extrator))
+print(id(extrator_2))
+
+# Desafio
+valor_convertido = extrator.converte()
+print("O valor convertido é : {:.2f}".format(valor_convertido))
