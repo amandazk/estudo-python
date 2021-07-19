@@ -14,7 +14,7 @@ Formação Python completa da plataforma Alura.
  - [x] Python 3 parte 2: Avançando na linguagem
  - [x] Python 3: Introdução a Orientação a objetos
  - [x] Python 3: Avançando na orientação a objetos
- - [ ] Python: Manipulação de Strings
+ - [x] Python: Manipulação de Strings
  - [ ] Python Collections parte 1: Listas e tuplas
  - [ ] Python Collections parte 2: Conjuntos e dicionários
  - [ ] Python Brasil: Validação de dados no padrão nacional
@@ -26,12 +26,15 @@ Formação Python completa da plataforma Alura.
  - [Curso 2][2]
  - [Curso 3][3]
  - [Curso 4][4]
+ - [Curso 5][5]
 
  
 [1]: https://github.com/amandazk/estudo-python/tree/main/curso-1
 [2]: https://github.com/amandazk/estudo-python/tree/main/curso-2
 [3]: https://github.com/amandazk/estudo-python/tree/main/curso-3
 [4]: https://github.com/amandazk/estudo-python/tree/main/curso-4
+[5]: https://github.com/amandazk/estudo-python/tree/main/curso-5
+
 
 
 
