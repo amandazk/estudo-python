@@ -16,7 +16,7 @@ Formação Python completa da plataforma Alura.
  - [x] Python 3: Avançando na orientação a objetos
  - [x] Python: Manipulação de Strings
  - [x] Python Collections parte 1: Listas e tuplas
- - [ ] Python Collections parte 2: Conjuntos e dicionários
+ - [x] Python Collections parte 2: Conjuntos e dicionários
  - [ ] Python Brasil: Validação de dados no padrão nacional
  - [ ] Testes automatizados: TDD com Python
 
@@ -28,6 +28,7 @@ Formação Python completa da plataforma Alura.
  - [Curso 4][4]
  - [Curso 5][5]
  - [Curso 6][6]
+ - [Curso 7][7]
 
  
 [1]: https://github.com/amandazk/estudo-python/tree/main/curso-1
@@ -36,10 +37,4 @@ Formação Python completa da plataforma Alura.
 [4]: https://github.com/amandazk/estudo-python/tree/main/curso-4
 [5]: https://github.com/amandazk/estudo-python/tree/main/curso-5
 [6]: https://github.com/amandazk/estudo-python/tree/main/curso-6
-
-
-
-
-
-
-
+[7]: https://github.com/amandazk/estudo-python/tree/main/curso-7
