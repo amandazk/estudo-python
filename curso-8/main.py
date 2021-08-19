@@ -1,7 +1,9 @@
 from cpf_cnpj import CpfCnpj
 
-# cpf_um = Cpf("19993663018")
-# print(cpf_um)
+cpf = ("19993663018")
+documento_um = CpfCnpj(cpf, "cpf")
+print(documento_um)
 
 cnpj = "03264059000185"
-documento = CpfCnpj(cnpj, "cnpj")
+documento_dois = CpfCnpj(cnpj, "cnpj")
+print(documento_dois)
