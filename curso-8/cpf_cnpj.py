@@ -1,5 +1,4 @@
 from validate_docbr import CPF, CNPJ
-import validate_docbr
 
 class Documento:
 
