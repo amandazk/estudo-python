@@ -1,6 +1,12 @@
 import re
+from TelefonesBr import TelefonesBr
 
-padrao = "\w{5,50}@\w{3,10}.\w{2,3}.\w{2,3}"
-texto = "amanda opa, tudo bem? amanda@gmail.com.br  opa, beleza?"
-resposta = re.search(padrao, texto)
-print(resposta.group())
+# padrao_molde = "(xx)aaaa-wwww"
+# padrao = "[0-9]{2}[0-9]{4,5}[0-9]{4}"
+# texto = "eu gosto do número 1245647897 e também de 5467821234"
+
+# resposta = re.findall(padrao, texto)
+# print(resposta)
+
+telefone = "551254437621"
+telefone_objeto = TelefonesBr(telefone) 
