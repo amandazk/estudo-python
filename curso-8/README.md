@@ -1,4 +1,4 @@
-### Expressões Regulares
+# Expressões Regulares
 
 As expressões regulares servem para encontrar **padrões bem definidos** dentro de uma **cadeia de caracteres** em um texto ou *str* maiores. Por exemplo, se temos um e-mail com um volume textual enorme contendo um número de telefone específico, poderemos extraí-lo sem precisarmos ler todo o conteúdo.
 
