@@ -18,3 +18,7 @@ Para construirmos este padrão, o primeiro passo é conhecer os **caracteres esp
   <img src="/imagens/regex.jpg" alt="regex" width=500 height=300>
 </p>
 
+
+<p align="center">
+  <img src="/imagens/strftime.jpg" alt="strftime" width=500 height=300>
+</p>
