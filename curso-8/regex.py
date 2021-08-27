@@ -10,3 +10,5 @@ from TelefonesBr import TelefonesBr
 
 telefone = "551254437621"
 telefone_objeto = TelefonesBr(telefone) 
+
+print(telefone_objeto)

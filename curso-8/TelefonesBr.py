@@ -8,10 +8,24 @@ class TelefonesBr:
         else:
             raise ValueError("Número incorreto")
 
+    def __str__(self):
+        return self.formata_numero()
+    
     def valida_telefone(self, telefone):
-        padrao = "[0-9]{2,3}[0-9]{2}[0-9]{4,5}[0-9]{4}"
+        padrao = "([0-9]{2,3})?([0-9]{2})([0-9]{4,5})([0-9]{4})"
         resposta = re.findall(padrao, telefone)
         if resposta:
             return True
         else:
             return False
+
+    def formata_numero(self):
+        padrao = "([0-9]{2,3})?([0-9]{2})([0-9]{4,5})([0-9]{4})"
+        resposta = re.search(padrao, self.telefone)
+        telefone_formatado = "+{}({}){}-{}".format(
+            resposta.group(1), 
+            resposta.group(2),
+            resposta.group(3),
+            resposta.group(4),
+        )
+        return telefone_formatado

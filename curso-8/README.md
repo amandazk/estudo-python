@@ -12,5 +12,5 @@ Para construirmos este padrão, o primeiro passo é conhecer os **caracteres esp
 - O \w pode ser qualquer número de zero a nove ou letra de "A" a "Z" ou o _(underline);
 - O \d pode ser qualquer número de 0 até 9;
 - A barra | representa uma coisa ou outra como em @|$ por exemplo;
-- Os parênteses () capturam um grupo, e veremos sua importância mais adiante.
+- Os parênteses () capturam um grupo.
 
