@@ -14,3 +14,7 @@ Para construirmos este padrão, o primeiro passo é conhecer os **caracteres esp
 - A barra | representa uma coisa ou outra como em @|$ por exemplo;
 - Os parênteses () capturam um grupo.
 
+<p align="center">
+  <img src="/imagens/regex.jpg" alt="regex" width=500 height=300>
+</p>
+
