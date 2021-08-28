@@ -1,4 +1,4 @@
-from datetime import datetime
+from datetime import datetime, timedelta
 
 class DatasBR:
     
@@ -27,3 +27,8 @@ class DatasBR:
     def formata_data(self):
         data_formatada = self.momento_cadastro.strftime("%d/%m/%Y %H:%M")
         return data_formatada
+
+    # Simulando dias de cadastro com o timedelta
+    def tempo_cadastro(self):
+        tempo_cadastro = (datetime.today() + timedelta(days=21, hours=13)) - self.momento_cadastro
+        return tempo_cadastro

@@ -1,15 +1,10 @@
 from datetime import date, datetime, timedelta
 from datas_br import DatasBR
 
-cadastro = DatasBR()
-print(cadastro)
-
 '''hoje = datetime.today()
-hoje_formatado = hoje.strftime("%d/%m/%Y %H:%M")
+amanha = datetime.today() + timedelta(days=1, hours=12)
 
-print(hoje)
-print(hoje_formatado)
-print(type(hoje_formatado))
-'''
+print(amanha-hoje)'''
 
-
+hoje = DatasBR()
+print(hoje.tempo_cadastro())
