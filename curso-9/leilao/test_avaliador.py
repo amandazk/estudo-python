@@ -23,3 +23,24 @@ class TestAvaliador(TestCase):
 
         self.assertEqual(menor_valor_esperado, avaliador.menor_lance)
         self.assertEqual(maior_valor_esperado, avaliador.maior_lance)
+
+    def test_avalia_2(self):
+        amanda = Usuario("Amanda")
+        joao = Usuario("Joao")
+
+        lance_amanda = Lance(amanda, 200)
+        lance_joao = Lance(joao, 75)
+
+        leilao = Leilao("Computador")
+
+        leilao.lances.append(lance_amanda)
+        leilao.lances.append(lance_joao)
+
+        avaliador = Avaliador()
+        avaliador.avalia(leilao)
+
+        menor_valor_esperado = 75
+        maior_valor_esperado = 200
+
+        self.assertEqual(menor_valor_esperado, avaliador.menor_lance)
+        self.assertEqual(maior_valor_esperado, avaliador.maior_lance)
