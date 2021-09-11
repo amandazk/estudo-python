@@ -1,5 +1,6 @@
 import sys
 
+
 class Usuario:
 
     def __init__(self, nome):
@@ -23,9 +24,13 @@ class Leilao:
         self.descricao = descricao
         self.__lances = []
 
+    def propoe(self, lance: Lance):
+        self.__lances.append(lance)
+
     @property
     def lances(self):
-        return self.__lances
+        return self.__lances[:]
+        # vai devolver uma cópia da lista, podendo somente usar o método propoe() para novos lances
 
 
 class Avaliador:

@@ -11,10 +11,10 @@ class TestAvaliador(TestCase):
 
     def test_deve_retornar_o_maior_e_o_menor_valor_de_um_lance_quando_adicionados_em_ordem_crescente(self):
         self.joao = Usuario("Joao")
-        self.lance_joao = Lance(self.joao, 75)
+        lance_joao = Lance(self.joao, 75)
 
-        self.leilao.lances.append(self.lance_joao)
-        self.leilao.lances.append(self.lance_amanda)
+        self.leilao.propoe(lance_joao)
+        self.leilao.propoe(self.lance_amanda)
 
         avaliador = Avaliador()
         avaliador.avalia(self.leilao)
@@ -29,8 +29,8 @@ class TestAvaliador(TestCase):
         joao = Usuario("Joao")
         lance_joao = Lance(joao, 75)
 
-        self.leilao.lances.append(self.lance_amanda)
-        self.leilao.lances.append(lance_joao)
+        self.leilao.propoe(self.lance_amanda)
+        self.leilao.propoe(lance_joao)
 
         avaliador = Avaliador()
         avaliador.avalia(self.leilao)
@@ -42,7 +42,7 @@ class TestAvaliador(TestCase):
         self.assertEqual(maior_valor_esperado, avaliador.maior_lance)
 
     def test_deve_retornar_o_mesmo_valor_para_o_maior_e_menor_lance_quando_o_leilao_tiver_um_lance(self):
-        self.leilao.lances.append(self.lance_amanda)
+        self.leilao.propoe(self.lance_amanda)
 
         avaliador = Avaliador()
         avaliador.avalia(self.leilao)
@@ -56,9 +56,9 @@ class TestAvaliador(TestCase):
         lance_joao = Lance(joao, 75)
         lance_ana = Lance(ana, 900)
 
-        self.leilao.lances.append(self.lance_amanda)
-        self.leilao.lances.append(lance_joao)
-        self.leilao.lances.append(lance_ana)
+        self.leilao.propoe(self.lance_amanda)
+        self.leilao.propoe(lance_joao)
+        self.leilao.propoe(lance_ana)
 
         avaliador = Avaliador()
         avaliador.avalia(self.leilao)
