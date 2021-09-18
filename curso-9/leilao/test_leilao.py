@@ -2,8 +2,8 @@ from unittest import TestCase
 from dominio import Usuario, Lance, Leilao
 
 
-class TestAvaliador(TestCase):
-    # Para cada cenário de teste, a classe TestAvaliador vai invocar o método setUp
+class TestLeilao(TestCase):
+    # Para cada cenário de teste, a classe TestLeilao vai invocar o método setUp
     def setUp(self):
         self.amanda = Usuario("Amanda")
         self.lance_amanda = Lance(self.amanda, 200)
@@ -56,3 +56,31 @@ class TestAvaliador(TestCase):
 
         self.assertEqual(menor_valor_esperado, self.leilao.menor_lance)
         self.assertEqual(maior_valor_esperado, self.leilao.maior_lance)
+
+    # se o leilão não tiver lance, deve permitir propor um lance
+    def test_deve_permitir_propor_um_lance_caso_o_leilao_nao_tenha_um_lance(self):
+        self.leilao.propoe(self.lance_amanda)
+
+        quantidade_lances_recebido = len(self.leilao.lances)
+        self.assertEqual(1, quantidade_lances_recebido)
+
+    # se o último usuário for diferente, dever permitir propor um lance
+    def test_deve_permitir_propor_um_lance_caso_o_ultimo_usuario_seja_diferente(self):
+        joao = Usuario("Joao")
+        lance_joao = Lance(joao, 400)
+
+        self.leilao.propoe(self.lance_amanda)
+        self.leilao.propoe(lance_joao)
+
+        quantidade_lances_recebido = len(self.leilao.lances)
+        self.assertEqual(2, quantidade_lances_recebido)
+
+    # se o últime usuário for o usuário atual, não deve pertmitir propor um lance
+    def test_nao_deve_permitir_propor_um_lance_caso_o_usuario_seja_o_mesmo(self):
+        lance_amanda_500 = Lance(self.amanda, 500)
+
+        self.leilao.propoe(self.lance_amanda)
+        self.leilao.propoe(lance_amanda_500)
+
+        quantidade_lances_recebido = len(self.leilao.lances)
+        self.assertEqual(1, quantidade_lances_recebido)
